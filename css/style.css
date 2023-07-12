@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+* a,
+li {
+  text-decoration: none;
+  color: #ddd;
+  cursor: pointer;
+  list-style: none; }
+
+* button {
+  cursor: pointer; }
+
+.mystyle {
+  color: #333; }
+
+body #main #header {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1; }
+  body #main #header .menu {
+    display: flex;
+    padding: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    border: none;
+    max-width: 960px; }
+    body #main #header .menu .down {
+      font-size: 15px;
+      transform: translateX(-12px); }
+    body #main #header .menu li:hover > ul.subnav {
+      display: block; }
+    body #main #header .menu li:hover {
+      background: #8c8989; }
+    body #main #header .menu li {
+      padding: 20px; }
+      body #main #header .menu li a {
+        font-size: 12px;
+        padding: 0 8px; }
+    body #main #header .menu .subnav {
+      position: absolute;
+      position: fixed;
+      background: #333;
+      display: none;
+      box-shadow: 0 0 20px #5e5d5d; }
+      body #main #header .menu .subnav li {
+        border-bottom: 1px solid #ddd; }
+        body #main #header .menu .subnav li:hover {
+          border-bottom: 1px solid #000000; }
+        body #main #header .menu .subnav li a a {
+          padding: 0 12px; }
+      body #main #header .menu .subnav:hover > ul.subnav1 {
+        display: block; }
+      body #main #header .menu .subnav .subnav1 {
+        position: absolute;
+        background: #333;
+        display: none;
+        top: 152px;
+        right: -161px; }
+  body #main #header .search-bar {
+    display: flex;
+    align-items: center; }
+    body #main #header .search-bar input {
+      height: 30px; }
+    body #main #header .search-bar .search {
+      padding: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+      font-size: 20px; }
+      body #main #header .search-bar .search:hover {
+        background: #e46124; }
+  body #main #header .icon {
+    font-size: 32px;
+    padding: 0px 20px;
+    color: #ddd; }
+body #main #slide {
+  margin-top: 60px;
+  position: relative;
+  height: 960px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  body #main #slide img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center; }
+  body #main #slide .text-content {
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    color: #ddd;
+    max-width: 960px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold; }
+    body #main #slide .text-content h1 {
+      padding: 24px; }
+    body #main #slide .text-content .text-description {
+      padding-bottom: 10px; }
+body #main #content {
+  height: 1100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body #main #content .content-section .title-index {
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    display: flex; }
+    body #main #content .content-section .title-index p {
+      color: #333;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 25px; }
+  body #main #content .content-section .product {
+    display: flex; }
+    body #main #content .content-section .product .card {
+      position: relative;
+      background: #ddd;
+      width: 280px;
+      height: 380px;
+      margin: 20px auto;
+      border-radius: 20px; }
+      body #main #content .content-section .product .card .card-heart,
+      body #main #content .content-section .product .card .card-cart {
+        position: absolute;
+        padding: 5px;
+        top: 10px; }
+        body #main #content .content-section .product .card .card-heart button,
+        body #main #content .content-section .product .card .card-cart button {
+          border: none;
+          font-size: 20px;
+          background: #ddd; }
+      body #main #content .content-section .product .card .card-heart {
+        left: 20px;
+        right: unset; }
+      body #main #content .content-section .product .card .card-cart {
+        right: 20px;
+        left: unset; }
+      body #main #content .content-section .product .card .card-img {
+        height: 260px; }
+        body #main #content .content-section .product .card .card-img img {
+          width: 100%; }
+      body #main #content .content-section .product .card .card-title,
+      body #main #content .content-section .product .card .card-price {
+        text-align: center;
+        color: #232323;
+        top: 0px;
+        font-size: 18px; }
+      body #main #content .content-section .product .card .card-price {
+        margin-bottom: 20px; }
+      body #main #content .content-section .product .card .card-action {
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 20px; }
+        body #main #content .content-section .product .card .card-action .buy,
+        body #main #content .content-section .product .card .card-action .cart {
+          padding: 12px 20px;
+          border-radius: 20px;
+          background: #6a6a6a;
+          color: #dddddd;
+          border: none; }
+  body #main #content .see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    height: 100px; }
+    body #main #content .see-more button {
+      padding: 10px 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: #ffffff;
+      border-radius: 5px;
+      border: 2px solid #7a7979; }
+  body #main #content .news {
+    width: 100%;
+    height: 60px;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body #main #content .news p {
+      font-size: 20px;
+      font-weight: bold; }
+body #main #img-bg {
+  background: url("/img/img1.webp") no-repeat;
+  height: 1080px; }
+body #main #footer {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 220px;
+  border-top: 1px solid #ddd;
+  background: #464646;
+  justify-content: space-around;
+  padding-top: 20px;
+  bottom: 0;
+  display: flex; }
+  body #main #footer .info p {
+    padding: 10px 0;
+    color: #ddd; }
+  body #main #footer .link h2 {
+    padding-bottom: 10px; }
+  body #main #footer .link a {
+    padding: 5px 0;
+    display: block;
+    color: #ddd; }
+  body #main #footer .service a {
+    padding: 10px 0;
+    display: block; }
+  body #main #footer .follow {
+    width: 120px; }
+    body #main #footer .follow h3 {
+      padding-bottom: 12px;
+      font-size: 24px;
+      text-align: center; }
+    body #main #footer .follow p {
+      color: #ddd; }
+    body #main #footer .follow .logo {
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
